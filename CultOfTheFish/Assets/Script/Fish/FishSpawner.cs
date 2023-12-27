@@ -9,8 +9,10 @@ public enum EFishType
 }
 public class FishSpawner : MonoBehaviour
 {
-    public int _fishSpawned;
+    private int _fishSpawned;
     public GameObject _BigFishPrefab;
+
+    public int GetFishSpawned(){return _fishSpawned;}
     public AFish SpawnFish(EFishType spawnType, UnityEngine.Vector2 pos)
     {
         switch (spawnType)
